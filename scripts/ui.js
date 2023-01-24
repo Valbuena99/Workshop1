@@ -1,27 +1,35 @@
 const containerPokemons = document.getElementById("container");
 
-export const renderponkemon=(pokemon)=>{
-    const {abilities,types,sprites,weight,id,base_experience,height,name}=pokemon
-    
-    let typepokemon = "";
-    types.forEach((item) => {
-      typepokemon += `
+export const renderponkemon = (pokemon) => {
+  const {
+    abilities,
+    types,
+    sprites,
+    weight,
+    id,
+    base_experience,
+    height,
+    name,
+  } = pokemon;
+
+  let typepokemon = "";
+  types.forEach((item) => {
+    typepokemon += `
 
            <span> ${item.type.name} </span>
            `;
-    });
+  });
 
-    let habilidadespokemon = "";
-    abilities.forEach((item) => {
-      habilidadespokemon = `
+  let habilidadespokemon = "";
+  abilities.forEach((item) => {
+    habilidadespokemon = `
            
             <span class="info-text">${item.ability.name} </span>
             `;
-    });
+  });
 
-
-    containerPokemons.innerHTML = "";
-    containerPokemons.innerHTML +=`
+  containerPokemons.innerHTML = "";
+  containerPokemons.innerHTML += `
     <section class="charizard-container">
             <div class="title">
                 <figure>
@@ -65,11 +73,10 @@ export const renderponkemon=(pokemon)=>{
                 </div>
             </div>
         </article>
-    `
+    `;
+};
 
-}
-
-// desestrucutrar una lista 
+// desestrucutrar una lista
 // export const printPokemons = (listPokemons) => {
 //   console.log(listPokemons);
 //   containerPokemons.innerHTML = "";
@@ -90,7 +97,7 @@ export const renderponkemon=(pokemon)=>{
 //     let habilidadespokemon = "";
 //     abilities.forEach((item) => {
 //       habilidadespokemon = `
-           
+
 //             <span class="info-text">${item.ability.name} </span>
 //             `;
 //     });
