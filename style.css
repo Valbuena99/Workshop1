@@ -23,9 +23,16 @@ body {
   background-color: var(--purple);
   display: flex;
   align-items: center;
+  justify-content: space-around;
   padding: 15px;
   gap: 10px;
   border-radius: 15px 15px 0 0;
+}
+
+.encabezado > div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .encabezado figure img {
@@ -50,6 +57,15 @@ body {
   flex-direction: column;
   width: 50%;
   gap: 20px;
+}
+
+.input {
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 .title {
